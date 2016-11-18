@@ -1,15 +1,23 @@
 
 <div class="page-header">
-  <h1>Home<small> is where the heart is</small></h1>
+  <h1>Dashboard<small> Application deployment</small></h1>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-6" style="background-color:lightgray;">
-            <label>Column left</label>
-        </div>
-        <div class="col-xs-6" style="background-color:lightblue;">
-            <label>Column Right</label>
+<div class="dashboard-container">
+    <div class="dashboard-item-container" ng-repeat="item in variables.dashboard.items">
+        <div class="dashboard-item">
+            <div class="item-logo-container">
+                <img ng-show="item.logo" ng-src="item.logo" alt="">
+                <i ng-show="!item.logo" class="fa fa-cloud-upload"></i>
+            </div>
         </div>
     </div>
 </div>
+
+<!--<div class="row">
+    <div class="col-xs-12">
+        <pre>
+            {{variables}}
+        </pre>
+    </div>
+</div>-->

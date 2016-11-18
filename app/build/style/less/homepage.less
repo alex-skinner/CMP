@@ -1,0 +1,27 @@
+.dashboard-container {
+    padding: 0;
+    margin: 0 12.5px 0 12.5px;
+    .dashboard-item-container {
+        width: 100%;
+        float: left;
+        @media (min-width: 500px) and (max-width: 999px) {
+            width: 50%;
+        }
+        @media (min-width: 1000px) {
+            width: 33.33333%;
+        }
+        .dashboard-item {
+            margin: 12.5px;
+            background-color: lightgrey;
+            height: 250px;
+            position: relative;
+            .item-logo-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 125px;
+                width: 125px;
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@
         "bower_components/": true,
         ".gitignore": true,
         "**.json": true,
-        "express.js": true,
+        "express.js": false,
         "gulpfile.js": true
     }
 }
