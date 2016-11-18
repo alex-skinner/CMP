@@ -14,7 +14,7 @@
                 <label class="title">{{item.title}}</label>
                 <label class="description">{{item.description}}</label>
             </div>
-            <div class="item-overlay">
+            <div class="item-overlay" ng-click="functions.deploy(item.type, item.id)">
                 <label>Deploy</label>
             </div>
         </div>

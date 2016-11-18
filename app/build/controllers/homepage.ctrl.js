@@ -1,4 +1,4 @@
-mainModule.controller('HomeCtrl', ['$scope', function ($scope) {
+mainModule.controller('HomeCtrl', ['$scope', 'dashboardApiSrv', function ($scope, dashboardApiSrv) {
 
     var constants = {
 
@@ -9,22 +9,40 @@ mainModule.controller('HomeCtrl', ['$scope', function ($scope) {
             items: [{
                 title: "Bamboo job",
                 description: "Kicks off a bamboo job that deploys infra into Azure",
-                logo: null
+                logo: null,
+                type: 'Bamboo',
+                id: 'DP0-DBP0'
             }, {
                 title: "Azure job",
                 description: "Deployment via Azure API",
-                logo: null
+                logo: null,
+                url: null
             },
             {
                 title: "Another job",
                 description: "Another infrastructure deployment",
-                logo: null
+                logo: null,
+                url: null
             }]
         }
     };
 
     var functions = {
-
+        deploy: function(type, id) {
+            if(type) {
+                dashboardApiSrv.deploy(type, id)
+                    .success(function(data, status) {
+                        toastr.success("Successfully requested build: "+data.buildNumber+" for plan: "+data.planKey);
+                    })
+                    .error(function(data, status) {
+                        toastr.error("An error has occured");
+                        console.log(data);
+                    });
+            }
+            else {
+                console.log("unknown type");
+            }
+        }
     };
 
     function setup() {
