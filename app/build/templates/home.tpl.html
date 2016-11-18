@@ -10,6 +10,13 @@
                 <img ng-show="item.logo" ng-src="item.logo" alt="">
                 <i ng-show="!item.logo" class="fa fa-cloud-upload"></i>
             </div>
+            <div class="item-contents-container">
+                <label class="title">{{item.title}}</label>
+                <label class="description">{{item.description}}</label>
+            </div>
+            <div class="item-overlay">
+                <label>Deploy</label>
+            </div>
         </div>
     </div>
 </div>
