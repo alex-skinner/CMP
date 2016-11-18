@@ -1,0 +1,16 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "app/dist/": true,
+        "node_modules/": true,
+        "cmds/": true,
+        "bower_components/": true,
+        ".gitignore": true,
+        "**.json": true,
+        "express.js": true,
+        "gulpfile.js": true
+    }
+}
