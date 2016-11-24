@@ -7,9 +7,13 @@ mainModule.config(['$routeProvider',
         templateUrl: 'app/build/templates/home.tpl.html',
         controller: 'HomeCtrl'
       }).
-      when('/about', {
-        templateUrl: 'app/build/templates/about-us.tpl.html',
-        controller: 'AboutCtrl'
+      when('/resourcegroups', {
+        templateUrl: 'app/build/templates/resource-groups.tpl.html',
+        controller: 'ResourceGroups'
+      }).
+      when('/resourcegroup/:Name', {
+        templateUrl: 'app/build/templates/resource-group.tpl.html',
+        controller: 'ResourceGroup'
       }).
       otherwise({
         redirectTo: '/home'

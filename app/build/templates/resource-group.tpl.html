@@ -1,0 +1,29 @@
+<div class="page-header">
+    <h1>{{variables.rgName}}<small> resource group</small></h1>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Location</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in variables.resourceGroup">
+                        <td>{{item.name}}</td>
+                        <td>{{item.type}}</td>
+                        <td>{{item.location}}</td>
+                        <td>
+                            <a target="_blank" ng-href="https://portal.azure.com/#resource{{item.id}}"><i class="fa fa-cloud"></i> Open in Azure portal</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
