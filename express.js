@@ -146,9 +146,9 @@ app.get('/api/getSubscriptions', function (req, res) {
 });
 
 app.get('/api/billing/getRateCard', function (req, res) {
-
+    console.log('hello world');
 });
-
+ 
 function registerEvents(callback) {
     cache.on("del", function (key, value) {
         if (key === _CACHE_TOKENNAME) {
@@ -181,4 +181,4 @@ function setupWebApp() {
     });
 }
 
-setupWebApp();
+setupWebApp(); 

@@ -1,0 +1,89 @@
+<div id="cssContentArea">
+    <div class="page-header">
+        <h1>Self Service portal<small> Application deployment</small></h1>
+    </div>
+    <div class="dashboard-container" ng-show="variables.display">
+        <div class="dashboard-item-container" ng-repeat="item in variables.dashboard.items" ng-click="functions.openModal(item)">
+            <div class="dashboard-item">
+                <div class="item-logo-container">
+                    <img ng-show="item.logo" ng-src="item.logo" alt="">
+                    <i ng-show="!item.logo" class="fa fa-cloud-upload"></i>
+                </div>
+                <div class="item-contents-container">
+                    <label class="title">{{item.name}}</label>
+                    <label class="description">{{item.description}}</label>
+                </div>
+                <div class="item-overlay">
+                    <label>Deploy</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-home" ng-show="!variables.display">
+        <label>Choose a deployment type</label>
+    </div>
+</div>
+<!-- SIDEBAR -->
+<div id="sidebar">
+    <ul class="sidebar-links">
+        <li class="link-item-header">
+            <h3>D<span>eploy</span></h3>
+        </li>
+        <li class="link-item">
+            <a ng-href="/#/selfservice/vms">
+                <i class="fa fa-desktop"></i>
+                <label>Virtual machines</label>
+            </a>
+        </li>
+        <li class="link-item">
+            <a ng-href="/#/selfservice/inf">
+                <i class="fa fa-cubes"></i>
+                <label>Infrastructure</label>
+            </a>
+        </li>
+        <!--<li class="break"></li>-->
+        <li class="link-item-header">
+            <h3>M<span>anage</span></h3>
+        </li>
+    </ul>
+</div>
+<!-- SIDEBAR END -->
+<div class="modal fade" id="deployModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">{{variables.deploymentItem.name}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="logo">
+                        <img ng-show="variables.deploymentItem.logo" ng-src="variables.deploymentItem.logo" alt="">
+                        <i ng-show="!variables.deploymentItem.logo" class="fa fa-cloud-upload"></i>
+                    </div>
+                    <div class="description">
+                        <label>{{variables.deploymentItem.description}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label for="resourceGroup">Resource Group</label>
+                        <input class="form-control" type="text" ng-model="variables.deploymentItem.resourceGroup" id="resourceGroup">
+                    </div>
+                    <div class="col-xs-4">
+                        <label for="vnet">Vnet</label>
+                        <input class="form-control" type="text" ng-model="variables.deploymentItem.vnet" id="vnet">
+                    </div>
+                    <div class="col-xs-4">
+                        <label for="subnet">Subnet</label>
+                        <input class="form-control" type="text" ng-model="variables.deploymentItem.subnet" id="subnet">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Deploy</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,120 @@
+@import "global-colors";
+#cssContentArea {
+    margin-left: 50px;
+    .dashboard-container {
+        padding: 0;
+        margin: 0 12.5px 0 12.5px;
+        .dashboard-item-container {
+            width: 100%;
+            float: left;
+            @media (min-width: 500px) and (max-width: 999px) {
+                width: 50%;
+            }
+            @media (min-width: 1000px) {
+                width: 33.33333%;
+            }
+            .dashboard-item {
+                margin: 12.5px;
+                background-color: @OffWhite;
+                height: 250px;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                &:hover {
+                    .item-overlay {
+                        top: 0;
+                    }
+                }
+                .item-logo-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 125px;
+                    width: 125px;
+                    background-color: @White;
+                    i {
+                        color: @MediumGrey;
+                        font-size: 30px;
+                        width: 100%;
+                        text-align: center;
+                        margin-top: 47.5px;
+                    }
+                }
+                .item-contents-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 250px;
+                    width: 100%;
+                    label {
+                        display: block;
+                        color: @DarkGrey;
+                    }
+                    label.title {
+                        margin-top: 12.5px;
+                        margin-left: 137.5px;
+                        font-size: 20px;
+                    }
+                    label.description {
+                        margin-top: 109.5px;
+                        margin-left: 12.5px;
+                    }
+                }
+                .item-overlay {
+                    position: absolute;
+                    left: 0;
+                    top: -100%;
+                    background-color: fade(@LightGrey, 20%);
+                    height: 250px;
+                    width: 100%;
+                    transition: top 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                    label {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 18px;
+                        margin-top: 112.5px;
+                        color: @MediumGrey;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#deployModal {
+    .modal-dialog {
+        width: 1000px;
+        .modal-content {
+            background-color: @LightGrey;
+            .modal-body {
+                .row {
+                    padding: 12.5px;
+                    .logo {
+                        height: 125px;
+                        width: 125px;
+                        float: left;
+                        border: 1px solid @OffWhite;
+                        i {
+                            font-size: 30px;
+                            width: 100%;
+                            text-align: center;
+                            margin-top: 47.5px;
+                        }
+                    }
+                    .description {
+                        display: inline-block;
+                        height: 127px;
+                        margin-left: 25px;
+                        position: relative;
+                        width: ~"calc(100% - 150px)";
+                        label {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

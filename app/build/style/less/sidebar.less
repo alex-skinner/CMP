@@ -1,0 +1,81 @@
+@import "global-colors";
+#sidebar {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    height: ~"calc(100% - 52px)";
+    width: 50px;
+    background-color: @DarkTurq;
+    z-index: 100;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    ul.sidebar-links {
+        list-style-type: none;
+        padding: 0;
+        li {
+            text-align: left;
+            width: 100%;
+        }
+        li.link-item {
+            cursor: pointer;
+            a {
+                color: @Blue;
+                padding: 10px 0 10px 20px;
+                width: 100%;
+                display: inline-block;
+                text-decoration: none;
+                &:hover {
+                    background-color: @LightBlue;
+                    color: darken(@Blue, 15%);
+                }
+            }
+            label {
+                opacity: 0;
+                transition: opacity 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition-delay: 0ms;
+                cursor: pointer;
+                margin: 0;
+            }
+        }
+        li.link-item-header {
+            padding-left: 15px;
+            cursor: default;
+            h3 {
+                font-size: 30px;
+                margin: 20px 0;
+                span {
+                    opacity: 0;
+                    transition: opacity 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    transition-delay: 0ms;
+                }
+            }
+        }
+        li.break {
+            border-bottom: 1px solid @OffWhite;
+        }
+    }
+    &:hover {
+        width: 260;
+        ul.sidebar-links {
+            li.link-item {
+                //padding-left: 25px;
+                i {
+                    margin-right: 15px;
+                }
+                label {
+                    opacity: 1;
+                    transition-delay: 200ms;
+                }
+            }
+            li.link-item-header {
+                h3 {
+                    span {
+                        opacity: 1;
+                        transition-delay: 200ms;
+                    }
+                }
+            }
+        }
+    }
+}

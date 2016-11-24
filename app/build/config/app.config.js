@@ -3,9 +3,9 @@ var mainModule = angular.module('MyApp',['ngRoute','LocalStorageModule', 'ui.boo
 mainModule.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/home', {
-        templateUrl: 'app/build/templates/home.tpl.html',
-        controller: 'HomeCtrl'
+      when('/selfservice/:deployGroup?', {
+        templateUrl: 'app/build/templates/selfservice.tpl.html',
+        controller: 'SelfServiceCtrl'
       }).
       when('/resourcegroups', {
         templateUrl: 'app/build/templates/resource-groups.tpl.html',
@@ -16,9 +16,10 @@ mainModule.config(['$routeProvider',
         controller: 'ResourceGroup'
       }).
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '/selfservice'
       });
   }]);
 
 mainModule.config(function (localStorageServiceProvider) {
+  
 });
