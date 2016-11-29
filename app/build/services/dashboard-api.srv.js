@@ -9,11 +9,15 @@ mainModule.service('dashboardApiSrv', ['$http', function ($http) {
     };
 
     srv.getResourceGroups = function () {
-        return $http.get('api/getResourceGroups');
+        return $http.get('api/azure/getResourceGroups');
     };
 
     srv.getResourceGroup = function (name) {
-        return $http.get('api/getResourceGroup?name=' + name);
+        return $http.get('api/azure/getResourceGroup?name=' + name);
     };
 
-}]);
+    srv.deployTest = function(payload, vmName, rgName) {
+        return $http.put('api/azure/createVm?vmname='+vmName+'&rgname='+rgName, payload);
+    };
+
+}]); 

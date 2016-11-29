@@ -6,6 +6,7 @@
   "dependencies": {
     "adal-node": "^0.1.22",
     "bamboo-api": "0.0.9",
+    "body-parser": "^1.15.2",
     "del": "^2.2.1",
     "express": "^4.13.4",
     "gulp": "^3.9.0",
@@ -13,7 +14,8 @@
     "gulp-replace": "^0.5.4",
     "node-cache": "^4.1.0",
     "request": "^2.78.0",
-    "restler": "^3.4.0"
+    "restler": "^3.4.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
