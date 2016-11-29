@@ -3,18 +3,23 @@ var mainModule = angular.module('MyApp',['ngRoute','LocalStorageModule', 'ui.boo
 mainModule.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/home', {
-        templateUrl: 'app/build/templates/home.tpl.html',
-        controller: 'HomeCtrl'
+      when('/selfservice/:deployGroup?', {
+        templateUrl: 'app/build/templates/selfservice.tpl.html',
+        controller: 'SelfServiceCtrl'
       }).
-      when('/about', {
-        templateUrl: 'app/build/templates/about-us.tpl.html',
-        controller: 'AboutCtrl'
+      when('/resourcegroups', {
+        templateUrl: 'app/build/templates/resource-groups.tpl.html',
+        controller: 'ResourceGroups'
+      }).
+      when('/resourcegroup/:Name', {
+        templateUrl: 'app/build/templates/resource-group.tpl.html',
+        controller: 'ResourceGroup'
       }).
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '/selfservice'
       });
   }]);
 
 mainModule.config(function (localStorageServiceProvider) {
+  
 });

@@ -1,22 +1,30 @@
 {
-  "name": "blank_angular_project",
+  "name": "Hiscox-CMP",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "dependencies": {
+    "adal-node": "^0.1.22",
+    "bamboo-api": "0.0.9",
+    "body-parser": "^1.15.2",
     "del": "^2.2.1",
     "express": "^4.13.4",
     "gulp": "^3.9.0",
     "gulp-less": "^3.1.0",
-    "gulp-replace": "^0.5.4"
+    "gulp-replace": "^0.5.4",
+    "node-cache": "^4.1.0",
+    "request": "^2.78.0",
+    "restler": "^3.4.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "nodemon": "^1.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon express.js --watch express.js --watch server/*"
   },
   "author": "",
   "license": "ISC"
