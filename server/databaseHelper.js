@@ -1,9 +1,9 @@
 var sql = require('mssql');
 var config = {
     user: 'srv_cmp',
-    password: 'H1sc0x!',
+    password: '_REMOVED',
     server: 'localhost',
-    database: 'hiscox_cmp',
+    database: 'cmp_db',
     options: {
         encrypt: false //true if using Azure SQL
     }

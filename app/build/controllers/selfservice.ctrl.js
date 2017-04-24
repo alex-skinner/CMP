@@ -61,7 +61,7 @@ mainModule.controller('SelfServiceCtrl', ['$scope', '$routeParams', 'dashboardAp
                 "osProfile": {
                     "computerName": "cmp-test-01",
                     "adminUsername": "cmp_admin",
-                    "adminPassword": "Pa$$w0rd!"
+                    "adminPassword": "_REMOVED"
                 },
                 "networkProfile": {
                     "networkInterfaces": [{

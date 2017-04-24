@@ -1,8 +1,8 @@
-var _BAMBOO_BASE_URL = "aebbt02.northeurope.cloudapp.azure.com";
+var _BAMBOO_BASE_URL = "_REMOVED";
 var _BAMBOO_PORT = 8085;
 var _BAMBOO_PATH = "/rest/api/latest/queue/";
-var _BAMBOO_USERNAME = 'alexskinner';
-var _BAMBOO_PASSWORD = 'Datsun77!Datsun77!';
+var _BAMBOO_USERNAME = '_REMOVED';
+var _BAMBOO_PASSWORD = '_REMOVED';
 
 var _BAMBOO_OPTIONS = {
     host: _BAMBOO_BASE_URL,

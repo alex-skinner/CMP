@@ -8,14 +8,14 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\index.html",
+            "program": "${workspaceRoot}\\express.js",
             "cwd": "${workspaceRoot}"
         },
         {
             "type": "node",
             "request": "attach",
             "name": "Attach to Process",
-            "port": 5858
+            "port": 30000
         }
     ]
 }

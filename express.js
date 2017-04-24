@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 var eventEmitter = new events.EventEmitter();
 
 var baseUrl = "https://management.azure.com/subscriptions";
-var subID = "311818f8-d369-419b-bfe1-fdf644de096f";
+var subID = "_REMOVED";
 var cache = new NodeCache({
     checkperiod: 60
 });
